@@ -7,7 +7,12 @@ use App\Post;
 
 class BlogController extends Controller {
     public function index() {
-        $posts = Post::all();
+
+        // $posts = Post::all();
+        // return view("blog.index", compact('posts'));
+
+        $posts = Post::with('author')->get();
         return view("blog.index", compact('posts'));
+ 
     }
 }
