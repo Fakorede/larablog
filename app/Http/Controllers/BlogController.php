@@ -14,7 +14,7 @@ class BlogController extends Controller {
         // $posts = Post::all();
         // return view("blog.index", compact('posts'));
 
-        $posts = Post::with('author')->latestFirst()->simplePaginate($this-limit);
+        $posts = Post::with('author')->latestFirst()->simplePaginate($this->limit);
         return view("blog.index", compact('posts'));
  
     }
