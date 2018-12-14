@@ -37,10 +37,7 @@
                 @endforeach
 
                 <nav>
-                  <ul class="pager">
-                    <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Newer</a></li>
-                    <li class="next"><a href="#">Older <span aria-hidden="true">&rarr;</span></a></li>
-                  </ul>
+                    {{ $posts->links() }}
                 </nav>
             </div>
             <!-- SIDEBAR -->
