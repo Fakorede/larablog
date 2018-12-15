@@ -23,7 +23,7 @@ class BlogController extends Controller {
     }
 
     public function show($id) {
-        $post = Post::findorFail($id);
+        $post = Post::published()->findorFail($id);
         return view('blog.show', compact('post'));
     }
 }
