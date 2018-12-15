@@ -9,13 +9,13 @@
                 @foreach($posts as $post)
                     <article class="post-item">
                         <div class="post-item-image">
-                            <a href="{{ route('blog.show', $post->id) }}">
+                            <a href="{{ route('blog.show', $post->slug) }}">
                                 <img src="/img/{{ $post->image }}" alt="">
                             </a>
                         </div>
                         <div class="post-item-body">
                             <div class="padding-10">
-                                <h2><a href="{{ route('blog.show', $post->id) }}">{{ $post->title }}</a></h2>
+                                <h2><a href="{{ route('blog.show', $post->slug) }}">{{ $post->title }}</a></h2>
                                 <p>{{ $post->excerpt }}</p>
                             </div>
 
